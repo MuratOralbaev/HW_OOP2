@@ -67,6 +67,6 @@ public class Radio {
 
     public void setDecreaseVolume(int newCurrentVolume) {
         currentVolume = newCurrentVolume;
-        currentVolume = currentVolume == 100 ? 100 : --currentVolume;
+        currentVolume = currentVolume > 100 ? 0 : --currentVolume;
     }
 }
