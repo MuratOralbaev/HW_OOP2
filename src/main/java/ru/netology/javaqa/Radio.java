@@ -17,23 +17,25 @@ public class Radio {
         currentRadiostation = newCurrentRadiostation;
     }
 
-    public int getNextRadiostation() {
-        return currentRadiostation;
-    }
-
-    public void setNextRadiostation(int newCurrentRadiostation) {
+    public void nextRadiostation(int newCurrentRadiostation) {
         currentRadiostation = newCurrentRadiostation;
         currentRadiostation = currentRadiostation >= 9 ? 0 : ++currentRadiostation;
     }
 
-    public int getPrevRadiostation() {
-        return currentRadiostation;
-    }
+    /*public void nextRadiostation(int newCurrentRadiostation) {
 
-    public void setPrevRadiostation(int newCurrentRadiostation) {
+
+    }*/
+
+    public void prevRadiostation(int newCurrentRadiostation) {
         currentRadiostation = newCurrentRadiostation;
         currentRadiostation = currentRadiostation <= 0 ? 9 : --currentRadiostation;
     }
+
+    /*public void setPrevRadiostation(int newCurrentRadiostation) {
+        currentRadiostation = newCurrentRadiostation;
+
+    }*/
 
     private int currentVolume;
 
@@ -52,21 +54,23 @@ public class Radio {
         currentVolume = newCurrentVolume;
     }
 
-    public int getIncreaseVolume() {
-        return currentVolume;
-    }
-
-    public void setIncreaseVolume(int newCurrentVolume) {
+    public void increaseVolume(int newCurrentVolume) {
         currentVolume = newCurrentVolume;
         currentVolume = currentVolume >= 100 ? 0 : ++currentVolume;
     }
 
-    public int getDecreaseVolume() {
-        return currentVolume;
-    }
+    /*public void setIncreaseVolume(int newCurrentVolume) {
+        currentVolume = newCurrentVolume;
 
-    public void setDecreaseVolume(int newCurrentVolume) {
+    }*/
+
+    public void decreaseVolume(int newCurrentVolume) {
         currentVolume = newCurrentVolume;
         currentVolume = currentVolume > 100 ? 0 : --currentVolume;
     }
+
+    /*public void setDecreaseVolume(int newCurrentVolume) {
+        currentVolume = newCurrentVolume;
+
+    }*/
 }
